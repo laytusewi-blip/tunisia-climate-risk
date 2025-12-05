@@ -119,7 +119,7 @@ coastal = selected_row['coastal']
 st.sidebar.subheader("📍 Location Details")
 elevation = st.sidebar.slider("Elevation (m)", 0, 500, 50 if coastal else 200)
 distance_to_coast = st.sidebar.slider("Distance to Coast (km)", 0.0, 150.0, 2.0 if coastal else 50.0)
-flood_zone = st.sidebar.select box("Flood Zone", ["Low", "Medium", "High"], index=1)
+flood_zone = st.sidebar.selectbox("Flood Zone", ["Low", "Medium", "High"], index=1)
 wildfire_zone = st.sidebar.selectbox("Wildfire Zone", ["Low", "Medium", "High"], index=1)
 
 # Calculate risks
