@@ -19,7 +19,7 @@ An AI-powered climate risk analysis and insurance premium calculator for Tunisia
 - Scikit-learn
 
 ## Live Demo
-[Add your Streamlit Cloud URL here after deployment]
+https://tunisia-climate-risk-lch9axvcifzbywgld9jgfl.streamlit.app/
 
 ## Local Setup
 ```bash
