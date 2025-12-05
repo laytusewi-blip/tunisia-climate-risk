@@ -1,5 +1,6 @@
 """Tunisia Climate Risk Assessment System - Enhanced"""
 import streamlit as st
+import pandas as pd 
 from data_loader import get_data_loader
 from risk_model import get_risk_model, get_premium_calculator
 from visualization import MapVisualizer, ChartVisualizer
