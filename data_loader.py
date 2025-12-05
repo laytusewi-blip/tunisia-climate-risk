@@ -13,14 +13,26 @@ class TunisiaDataLoader:
 
     def create_tunisia_neighborhoods(self):
         neighborhoods_data = [
-            {"name": "Tunis Centre Ville", "governorate": "Tunis", "lat": 36.8065, "lon": 10.1815, "population": 50000, "area_km2": 5.2, "coastal": True},
+          {"name": "Tunis Centre Ville", "governorate": "Tunis", "lat": 36.8065, "lon": 10.1815, "population": 50000, "area_km2": 5.2, "coastal": True},
             {"name": "La Marsa", "governorate": "Tunis", "lat": 36.8781, "lon": 10.3250, "population": 92000, "area_km2": 18.5, "coastal": True},
             {"name": "Carthage", "governorate": "Tunis", "lat": 36.8526, "lon": 10.3233, "population": 21000, "area_km2": 7.8, "coastal": True},
             {"name": "Bardo", "governorate": "Tunis", "lat": 36.8089, "lon": 10.1403, "population": 73300, "area_km2": 12.3, "coastal": False},
+            {"name": "Ariana Ville", "governorate": "Ariana", "lat": 36.8625, "lon": 10.1956, "population": 97687, "area_km2": 16.2, "coastal": False},
+            {"name": "Soukra", "governorate": "Ariana", "lat": 36.8489, "lon": 10.2156, "population": 129693, "area_km2": 22.4, "coastal": False},
             {"name": "Sfax Centre", "governorate": "Sfax", "lat": 34.7405, "lon": 10.7603, "population": 272801, "area_km2": 56.2, "coastal": True},
+            {"name": "Sfax Medina", "governorate": "Sfax", "lat": 34.7431, "lon": 10.7614, "population": 45000, "area_km2": 8.1, "coastal": True},
             {"name": "Sousse Medina", "governorate": "Sousse", "lat": 35.8256, "lon": 10.6369, "population": 221530, "area_km2": 45.0, "coastal": True},
+            {"name": "Port El Kantaoui", "governorate": "Sousse", "lat": 35.8942, "lon": 10.5954, "population": 8545, "area_km2": 15.3, "coastal": True},
+            {"name": "Hammam Sousse", "governorate": "Sousse", "lat": 35.8603, "lon": 10.6031, "population": 38000, "area_km2": 18.7, "coastal": True},
             {"name": "Bizerte Centre", "governorate": "Bizerte", "lat": 37.2744, "lon": 9.8739, "population": 142966, "area_km2": 32.1, "coastal": True},
+            {"name": "Menzel Bourguiba", "governorate": "Bizerte", "lat": 37.1542, "lon": 9.7853, "population": 39384, "area_km2": 11.5, "coastal": False},
             {"name": "Hammamet", "governorate": "Nabeul", "lat": 36.4000, "lon": 10.6167, "population": 73236, "area_km2": 36.8, "coastal": True},
+            {"name": "Nabeul Centre", "governorate": "Nabeul", "lat": 36.4561, "lon": 10.7356, "population": 56387, "area_km2": 28.4, "coastal": True},
+            {"name": "Monastir Centre", "governorate": "Monastir", "lat": 35.7774, "lon": 10.8264, "population": 93306, "area_km2": 24.5, "coastal": True},
+            {"name": "Kairouan Medina", "governorate": "Kairouan", "lat": 35.6781, "lon": 10.0963, "population": 186653, "area_km2": 42.0, "coastal": False},
+            {"name": "Gabès Centre", "governorate": "Gabès", "lat": 33.8815, "lon": 10.0982, "population": 152921, "area_km2": 38.6, "coastal": True},
+            {"name": "Djerba Houmt Souk", "governorate": "Medenine", "lat": 33.8076, "lon": 10.8451, "population": 75904, "area_km2": 45.2, "coastal": True},
+            {"name": "Medenine Centre", "governorate": "Medenine", "lat": 33.3549, "lon": 10.5055, "population": 61705, "area_km2": 28.9, "coastal": False},
         ]
         geometries = [Polygon([(n['lon']-0.02, n['lat']-0.02), (n['lon']+0.02, n['lat']-0.02), (n['lon']+0.02, n['lat']+0.02), (n['lon']-0.02, n['lat']+0.02)]) for n in neighborhoods_data]
         self.neighborhoods = gpd.GeoDataFrame(pd.DataFrame(neighborhoods_data), geometry=geometries, crs="EPSG:4326")
